@@ -1,0 +1,24 @@
+/*
+Theme Name: Allotment Theme
+Theme URI: https://github.com/juettemann/allotment-theme
+Author: Thomas Juettemann
+Author URI: https://juettemann.co.uk
+Description: A clean, community-focused WordPress theme designed for allotment association websites. Pairs with the Allotment Manager plugin and ships with customiser fields for hero copy, feature cards, contact details and social links. Dependency-free CSS using custom properties for easy rebranding.
+Version: 1.0.0
+Requires at least: 6.7
+Tested up to: 6.7
+Requires PHP: 8.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: allotment-theme
+Tags: community, custom-colors, custom-logo, custom-menu, custom-header, featured-images, full-width-template, sticky-post, threaded-comments, translation-ready
+
+Allotment Theme is licensed under the GPL v2 or later.
+Icons in assets/icons/sprite.svg are derived from Lucide (https://lucide.dev),
+licensed under the ISC License. See ATTRIBUTIONS.md for credits.
+*/
+
+@import url("assets/css/variables.css");
+@import url("assets/css/base.css");
+@import url("assets/css/layout.css");
+@import url("assets/css/components.css");
