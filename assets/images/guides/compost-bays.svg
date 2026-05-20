@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" role="img" aria-labelledby="ttl desc">
+	<title id="ttl">A three-bay compost system</title>
+	<desc id="desc">Three side-by-side wooden bays at progressive stages of decomposition. From left to right: filling with fresh material, rotting with steam rising, and finished dark crumbly compost. Material moves left to right over twelve to twenty-four months.</desc>
+
+	<rect width="700" height="360" fill="#fdfcfb"/>
+
+	<!-- Time-arrow title -->
+	<text x="350" y="30" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-style="italic" fill="#5c5347">Material moves left to right over 12 to 24 months</text>
+
+	<!-- Ground line -->
+	<line x1="20" y1="300" x2="680" y2="300" stroke="#3d3428" stroke-width="2"/>
+	<rect x="20" y="300" width="660" height="40" fill="#8B6F47" opacity="0.6"/>
+
+	<!-- ===== Bay 1: Filling ===== -->
+	<g>
+		<rect x="40" y="110" width="180" height="190" fill="none" stroke="#5a4a3a" stroke-width="3"/>
+		<line x1="80" y1="110" x2="80" y2="300" stroke="#5a4a3a" stroke-width="2"/>
+		<line x1="120" y1="110" x2="120" y2="300" stroke="#5a4a3a" stroke-width="2"/>
+		<line x1="160" y1="110" x2="160" y2="300" stroke="#5a4a3a" stroke-width="2"/>
+		<line x1="200" y1="110" x2="200" y2="300" stroke="#5a4a3a" stroke-width="2"/>
+		<line x1="40" y1="150" x2="220" y2="150" stroke="#5a4a3a" stroke-width="2"/>
+		<line x1="40" y1="220" x2="220" y2="220" stroke="#5a4a3a" stroke-width="2"/>
+
+		<!-- Fresh greens pile (high) -->
+		<path d="M 45 175 Q 130 130 215 165 L 215 300 L 45 300 Z" fill="#8fac93"/>
+		<!-- Visible chunks -->
+		<circle cx="80" cy="185" r="6" fill="#6b8e6f"/>
+		<circle cx="110" cy="160" r="5" fill="#e8a64e"/>
+		<circle cx="140" cy="170" r="5" fill="#6b8e6f"/>
+		<circle cx="170" cy="155" r="6" fill="#c86f4a"/>
+		<circle cx="190" cy="180" r="4" fill="#6b8e6f"/>
+		<circle cx="60" cy="200" r="4" fill="#e8a64e"/>
+		<circle cx="100" cy="220" r="5" fill="#6b8e6f"/>
+		<rect x="145" y="195" width="14" height="3" fill="#c8a87a"/>
+		<rect x="180" y="230" width="12" height="3" fill="#c8a87a"/>
+		<rect x="65" y="240" width="14" height="3" fill="#c8a87a"/>
+
+		<text x="130" y="95" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="600" fill="#3d3428">Filling</text>
+		<text x="130" y="328" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">fresh greens &amp; browns</text>
+	</g>
+
+	<!-- Arrow 1 -->
+	<path d="M 230 200 L 258 200 M 248 192 L 258 200 L 248 208" stroke="#3d3428" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+	<!-- ===== Bay 2: Rotting ===== -->
+	<g>
+		<rect x="265" y="110" width="180" height="190" fill="none" stroke="#5a4a3a" stroke-width="3"/>
+		<line x1="305" y1="110" x2="305" y2="300" stroke="#5a4a3a" stroke-width="2"/>
+		<line x1="345" y1="110" x2="345" y2="300" stroke="#5a4a3a" stroke-width="2"/>
+		<line x1="385" y1="110" x2="385" y2="300" stroke="#5a4a3a" stroke-width="2"/>
+		<line x1="425" y1="110" x2="425" y2="300" stroke="#5a4a3a" stroke-width="2"/>
+		<line x1="265" y1="150" x2="445" y2="150" stroke="#5a4a3a" stroke-width="2"/>
+		<line x1="265" y1="220" x2="445" y2="220" stroke="#5a4a3a" stroke-width="2"/>
+
+		<!-- Brown pile (medium) -->
+		<path d="M 270 220 Q 355 195 440 220 L 440 300 L 270 300 Z" fill="#8B6F47"/>
+		<circle cx="295" cy="230" r="4" fill="#5a4a3a"/>
+		<circle cx="320" cy="225" r="5" fill="#5a4a3a"/>
+		<circle cx="360" cy="220" r="4" fill="#3d3428"/>
+		<circle cx="395" cy="225" r="5" fill="#5a4a3a"/>
+		<circle cx="420" cy="232" r="4" fill="#3d3428"/>
+		<circle cx="350" cy="250" r="3" fill="#3d3428"/>
+		<circle cx="310" cy="260" r="3" fill="#3d3428"/>
+		<circle cx="390" cy="265" r="3" fill="#3d3428"/>
+
+		<!-- Steam wisps -->
+		<path d="M 320 200 Q 325 188 318 175 Q 325 162 318 150" stroke="#8b7d6b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+		<path d="M 360 195 Q 365 183 358 170 Q 365 157 358 145" stroke="#8b7d6b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+		<path d="M 395 200 Q 400 188 393 175 Q 400 162 393 150" stroke="#8b7d6b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+		<text x="355" y="95" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="600" fill="#3d3428">Rotting</text>
+		<text x="355" y="328" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">breaking down, often warm</text>
+	</g>
+
+	<!-- Arrow 2 -->
+	<path d="M 455 200 L 483 200 M 473 192 L 483 200 L 473 208" stroke="#3d3428" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+	<!-- ===== Bay 3: Finished ===== -->
+	<g>
+		<rect x="490" y="110" width="180" height="190" fill="none" stroke="#5a4a3a" stroke-width="3"/>
+		<line x1="530" y1="110" x2="530" y2="300" stroke="#5a4a3a" stroke-width="2"/>
+		<line x1="570" y1="110" x2="570" y2="300" stroke="#5a4a3a" stroke-width="2"/>
+		<line x1="610" y1="110" x2="610" y2="300" stroke="#5a4a3a" stroke-width="2"/>
+		<line x1="650" y1="110" x2="650" y2="300" stroke="#5a4a3a" stroke-width="2"/>
+		<line x1="490" y1="150" x2="670" y2="150" stroke="#5a4a3a" stroke-width="2"/>
+		<line x1="490" y1="220" x2="670" y2="220" stroke="#5a4a3a" stroke-width="2"/>
+
+		<!-- Low dark crumbly pile -->
+		<path d="M 495 250 Q 580 240 665 250 L 665 300 L 495 300 Z" fill="#3d3428"/>
+		<circle cx="520" cy="260" r="3" fill="#5a4a3a"/>
+		<circle cx="545" cy="255" r="3" fill="#5a4a3a"/>
+		<circle cx="580" cy="252" r="3" fill="#5a4a3a"/>
+		<circle cx="615" cy="258" r="3" fill="#5a4a3a"/>
+		<circle cx="640" cy="262" r="3" fill="#5a4a3a"/>
+
+		<!-- Worm -->
+		<path d="M 555 275 Q 562 270 570 275 Q 578 280 585 275" stroke="#c86f4a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+		<text x="580" y="95" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="600" fill="#3d3428">Finished</text>
+		<text x="580" y="328" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">dark, crumbly, ready to spread</text>
+	</g>
+</svg>

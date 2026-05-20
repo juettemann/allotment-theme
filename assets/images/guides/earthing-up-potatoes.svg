@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" role="img" aria-labelledby="ttl desc">
+	<title id="ttl">Earthing up potatoes</title>
+	<desc id="desc">Three stages of potato cultivation shown as a cross-section through the soil. Stage 1: chitted seed potato planted in a fifteen-centimetre furrow. Stage 2: shoots emerging from a low mound about a month after planting. Stage 3: fully earthed up with foliage on top of a tall ridge, multiple tubers developing inside.</desc>
+
+	<rect width="700" height="300" fill="#fdfcfb"/>
+
+	<!-- Panel separators -->
+	<line x1="232" y1="20" x2="232" y2="265" stroke="#e0d8ce" stroke-width="1.5"/>
+	<line x1="465" y1="20" x2="465" y2="265" stroke="#e0d8ce" stroke-width="1.5"/>
+
+	<!-- ===== Panel 1: Plant ===== -->
+	<rect x="15" y="120" width="215" height="125" fill="#8B6F47"/>
+	<!-- Soil surface line -->
+	<line x1="15" y1="120" x2="230" y2="120" stroke="#3d3428" stroke-width="1.5"/>
+	<!-- Furrow (V cut) -->
+	<path d="M 60 120 L 115 175 L 170 120 Z" fill="#fdfcfb"/>
+	<path d="M 60 120 L 115 175 L 170 120" stroke="#3d3428" stroke-width="1.2" fill="none"/>
+	<!-- Seed potato -->
+	<ellipse cx="115" cy="168" rx="16" ry="11" fill="#d4a574"/>
+	<ellipse cx="111" cy="164" rx="11" ry="3" fill="#b8916a"/>
+	<circle cx="118" cy="172" r="1.5" fill="#5a4a3a"/>
+	<circle cx="106" cy="171" r="1.5" fill="#5a4a3a"/>
+	<!-- Chit -->
+	<path d="M 115 160 Q 118 150 121 140" stroke="#6b8e6f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+	<circle cx="121" cy="139" r="2.5" fill="#8fac93"/>
+
+	<text x="120" y="45" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="600" fill="#3d3428">1. Plant</text>
+	<text x="120" y="68" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#5c5347">Chitted seed potato</text>
+	<text x="120" y="83" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#5c5347">in a 15 cm furrow,</text>
+	<text x="120" y="98" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#5c5347">shoots facing up</text>
+
+	<!-- ===== Panel 2: Shoots emerge ===== -->
+	<rect x="234" y="120" width="229" height="125" fill="#8B6F47"/>
+	<line x1="234" y1="120" x2="463" y2="120" stroke="#3d3428" stroke-width="1.5"/>
+	<!-- Low mound on top of base soil -->
+	<path d="M 280 120 Q 350 95 420 120 Z" fill="#8B6F47"/>
+	<path d="M 280 120 Q 350 95 420 120" stroke="#5a4a3a" stroke-width="1.5" fill="none"/>
+	<!-- Tuber (still partly visible under mound) -->
+	<ellipse cx="350" cy="158" rx="14" ry="9" fill="#c8a87a" opacity="0.85"/>
+	<!-- Main stem -->
+	<line x1="350" y1="148" x2="350" y2="105" stroke="#5a7a5e" stroke-width="3" stroke-linecap="round"/>
+	<!-- Lower leaves -->
+	<ellipse cx="335" cy="110" rx="13" ry="7" fill="#6b8e6f" transform="rotate(-30 335 110)"/>
+	<ellipse cx="365" cy="110" rx="13" ry="7" fill="#6b8e6f" transform="rotate(30 365 110)"/>
+	<!-- Upper leaves -->
+	<ellipse cx="342" cy="90" rx="11" ry="6" fill="#8fac93" transform="rotate(-20 342 90)"/>
+	<ellipse cx="358" cy="90" rx="11" ry="6" fill="#8fac93" transform="rotate(20 358 90)"/>
+
+	<text x="350" y="45" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="600" fill="#3d3428">2. Shoots emerge</text>
+	<text x="350" y="68" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#5c5347">After 3 to 4 weeks.</text>
+	<text x="350" y="83" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#5c5347">Hoe soil up around stems</text>
+	<text x="350" y="98" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#5c5347">when they reach 20 cm.</text>
+
+	<!-- ===== Panel 3: Earthed up ===== -->
+	<rect x="467" y="120" width="218" height="125" fill="#8B6F47"/>
+	<line x1="467" y1="120" x2="685" y2="120" stroke="#3d3428" stroke-width="1.5"/>
+	<!-- Tall ridge -->
+	<path d="M 495 120 L 540 75 L 600 75 L 645 120 Z" fill="#8B6F47"/>
+	<path d="M 495 120 L 540 75 L 600 75 L 645 120" stroke="#5a4a3a" stroke-width="1.5" fill="none"/>
+	<!-- Tubers inside ridge -->
+	<ellipse cx="540" cy="130" rx="10" ry="6" fill="#c8a87a" opacity="0.85"/>
+	<ellipse cx="568" cy="120" rx="10" ry="6" fill="#c8a87a" opacity="0.85"/>
+	<ellipse cx="600" cy="130" rx="10" ry="6" fill="#c8a87a" opacity="0.85"/>
+	<ellipse cx="555" cy="105" rx="9" ry="5" fill="#c8a87a" opacity="0.85"/>
+	<ellipse cx="585" cy="100" rx="9" ry="5" fill="#c8a87a" opacity="0.85"/>
+	<!-- Stems -->
+	<line x1="555" y1="80" x2="555" y2="55" stroke="#5a7a5e" stroke-width="2.5"/>
+	<line x1="580" y1="80" x2="580" y2="50" stroke="#5a7a5e" stroke-width="2.5"/>
+	<!-- Foliage above -->
+	<ellipse cx="540" cy="60" rx="14" ry="8" fill="#6b8e6f" transform="rotate(-20 540 60)"/>
+	<ellipse cx="570" cy="55" rx="15" ry="9" fill="#6b8e6f"/>
+	<ellipse cx="600" cy="60" rx="14" ry="8" fill="#6b8e6f" transform="rotate(20 600 60)"/>
+	<ellipse cx="558" cy="42" rx="12" ry="7" fill="#8fac93"/>
+	<ellipse cx="582" cy="42" rx="12" ry="7" fill="#8fac93"/>
+	<!-- Small white flower -->
+	<circle cx="570" cy="30" r="3.5" fill="#fdfcfb" stroke="#3d3428" stroke-width="0.7"/>
+	<circle cx="570" cy="30" r="1" fill="#e8a64e"/>
+
+	<text x="570" y="155" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="600" fill="#3d3428">3. Earthed up</text>
+	<text x="570" y="178" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#5c5347">Tall ridge keeps light off</text>
+	<text x="570" y="193" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#5c5347">developing tubers</text>
+	<text x="570" y="208" text-anchor="middle" font-family="sans-serif" font-size="11" font-style="italic" fill="#5c5347">(green potatoes are bitter)</text>
+
+	<!-- Time arrow at bottom -->
+	<line x1="60" y1="275" x2="640" y2="275" stroke="#5c5347" stroke-width="1.5"/>
+	<polyline points="630,269 642,275 630,281" stroke="#5c5347" stroke-width="1.5" fill="none"/>
+	<text x="350" y="293" text-anchor="middle" font-family="sans-serif" font-size="12" font-style="italic" fill="#5c5347">From March planting to June or July harvest (first earlies)</text>
+</svg>
