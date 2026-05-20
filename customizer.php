@@ -213,6 +213,10 @@ function allotment_theme_customize_register( $wp_customize ) {
 		'allotment_footer', $d['footer_email']
 	);
 	allotment_customize_url(
+		$wp_customize, 'footer_contact_url', __( 'Contact page URL', 'allotment-theme' ),
+		'allotment_footer', $d['footer_contact_url']
+	);
+	allotment_customize_url(
 		$wp_customize, 'footer_facebook', __( 'Facebook URL', 'allotment-theme' ),
 		'allotment_footer', $d['footer_facebook']
 	);

@@ -7,13 +7,14 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$tagline   = allotment_mod( 'footer_tagline', allotment_default( 'footer_tagline' ) );
-$address   = allotment_mod( 'footer_address', allotment_default( 'footer_address' ) );
-$email     = allotment_mod( 'footer_email', allotment_default( 'footer_email' ) );
-$facebook  = allotment_mod( 'footer_facebook', allotment_default( 'footer_facebook' ) );
-$instagram = allotment_mod( 'footer_instagram', allotment_default( 'footer_instagram' ) );
-$year      = allotment_mod( 'footer_year', allotment_default( 'footer_year' ) );
-$site_name = get_bloginfo( 'name' );
+$tagline     = allotment_mod( 'footer_tagline', allotment_default( 'footer_tagline' ) );
+$address     = allotment_mod( 'footer_address', allotment_default( 'footer_address' ) );
+$email       = allotment_mod( 'footer_email', allotment_default( 'footer_email' ) );
+$contact_url = allotment_mod( 'footer_contact_url', allotment_default( 'footer_contact_url' ) );
+$facebook    = allotment_mod( 'footer_facebook', allotment_default( 'footer_facebook' ) );
+$instagram   = allotment_mod( 'footer_instagram', allotment_default( 'footer_instagram' ) );
+$year        = allotment_mod( 'footer_year', allotment_default( 'footer_year' ) );
+$site_name   = get_bloginfo( 'name' );
 ?>
 <footer class="at-footer" role="contentinfo">
 	<div class="container">
@@ -42,8 +43,8 @@ $site_name = get_bloginfo( 'name' );
 					?>
 					<ul class="at-footer__list">
 						<li><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><?php esc_html_e( 'About Us', 'allotment-theme' ); ?></a></li>
-						<li><a href="<?php echo esc_url( home_url( '/allotment-application/' ) ); ?>"><?php esc_html_e( 'Plot Availability', 'allotment-theme' ); ?></a></li>
-						<li><a href="<?php echo esc_url( home_url( '/member-portal/' ) ); ?>"><?php esc_html_e( 'Membership', 'allotment-theme' ); ?></a></li>
+						<li><a href="<?php echo esc_url( home_url( '/plot-availability/' ) ); ?>"><?php esc_html_e( 'Plot Availability', 'allotment-theme' ); ?></a></li>
+						<li><a href="<?php echo esc_url( home_url( '/membership/' ) ); ?>"><?php esc_html_e( 'Membership', 'allotment-theme' ); ?></a></li>
 						<li><a href="<?php echo esc_url( home_url( '/events/' ) ); ?>"><?php esc_html_e( 'Events', 'allotment-theme' ); ?></a></li>
 					</ul>
 					<?php
@@ -68,7 +69,6 @@ $site_name = get_bloginfo( 'name' );
 						<li><a href="<?php echo esc_url( home_url( '/growing-guides/' ) ); ?>"><?php esc_html_e( 'Growing Guides', 'allotment-theme' ); ?></a></li>
 						<li><a href="<?php echo esc_url( home_url( '/community-rules/' ) ); ?>"><?php esc_html_e( 'Community Rules', 'allotment-theme' ); ?></a></li>
 						<li><a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>"><?php esc_html_e( 'FAQ', 'allotment-theme' ); ?></a></li>
-						<li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Contact', 'allotment-theme' ); ?></a></li>
 					</ul>
 					<?php
 				}
@@ -88,6 +88,12 @@ $site_name = get_bloginfo( 'name' );
 						<li>
 							<?php allotment_icon( 'mail', [ 'size' => 'sm' ] ); ?>
 							<a href="<?php echo esc_url( 'mailto:' . $email ); ?>"><?php echo esc_html( $email ); ?></a>
+						</li>
+					<?php endif; ?>
+					<?php if ( $contact_url ) : ?>
+						<li>
+							<?php allotment_icon( 'message-circle', [ 'size' => 'sm' ] ); ?>
+							<a href="<?php echo esc_url( $contact_url ); ?>"><?php esc_html_e( 'Contact us', 'allotment-theme' ); ?></a>
 						</li>
 					<?php endif; ?>
 				</ul>
