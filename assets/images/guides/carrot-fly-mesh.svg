@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" role="img" aria-labelledby="ttl desc">
+	<title id="ttl">Carrot-fly mesh barrier</title>
+	<desc id="desc">A side-on view of a carrot bed surrounded by a sixty-centimetre-tall fine-mesh barrier on four corner posts. The barrier is taller than carrot flies can fly, so they are kept out of the bed.</desc>
+
+	<rect width="700" height="360" fill="#fdfcfb"/>
+
+	<text x="350" y="35" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="600" fill="#3d3428">A 60 cm mesh barrier keeps carrot flies out</text>
+	<text x="350" y="56" text-anchor="middle" font-family="sans-serif" font-size="12" font-style="italic" fill="#5c5347">Female flies cannot fly higher than about 60 cm above the ground</text>
+
+	<!-- Ground -->
+	<rect x="50" y="290" width="600" height="50" fill="#8B6F47"/>
+	<line x1="50" y1="290" x2="650" y2="290" stroke="#3d3428" stroke-width="2"/>
+
+	<!-- Bed area (slightly raised) -->
+	<rect x="180" y="278" width="340" height="14" fill="#5a4a3a"/>
+
+	<!-- Mesh posts (4 corners shown as 2 in this side view) -->
+	<rect x="180" y="125" width="6" height="165" fill="#c8a87a" stroke="#5a4a3a" stroke-width="1"/>
+	<rect x="514" y="125" width="6" height="165" fill="#c8a87a" stroke="#5a4a3a" stroke-width="1"/>
+
+	<!-- Mesh (a series of fine vertical and horizontal lines for visual texture) -->
+	<g stroke="#3d3428" stroke-width="0.5" opacity="0.5">
+		<!-- Horizontal mesh lines -->
+		<line x1="186" y1="135" x2="514" y2="135"/>
+		<line x1="186" y1="150" x2="514" y2="150"/>
+		<line x1="186" y1="165" x2="514" y2="165"/>
+		<line x1="186" y1="180" x2="514" y2="180"/>
+		<line x1="186" y1="195" x2="514" y2="195"/>
+		<line x1="186" y1="210" x2="514" y2="210"/>
+		<line x1="186" y1="225" x2="514" y2="225"/>
+		<line x1="186" y1="240" x2="514" y2="240"/>
+		<line x1="186" y1="255" x2="514" y2="255"/>
+		<line x1="186" y1="270" x2="514" y2="270"/>
+		<line x1="186" y1="285" x2="514" y2="285"/>
+		<!-- Vertical mesh lines -->
+		<line x1="200" y1="130" x2="200" y2="290"/>
+		<line x1="220" y1="130" x2="220" y2="290"/>
+		<line x1="240" y1="130" x2="240" y2="290"/>
+		<line x1="260" y1="130" x2="260" y2="290"/>
+		<line x1="280" y1="130" x2="280" y2="290"/>
+		<line x1="300" y1="130" x2="300" y2="290"/>
+		<line x1="320" y1="130" x2="320" y2="290"/>
+		<line x1="340" y1="130" x2="340" y2="290"/>
+		<line x1="360" y1="130" x2="360" y2="290"/>
+		<line x1="380" y1="130" x2="380" y2="290"/>
+		<line x1="400" y1="130" x2="400" y2="290"/>
+		<line x1="420" y1="130" x2="420" y2="290"/>
+		<line x1="440" y1="130" x2="440" y2="290"/>
+		<line x1="460" y1="130" x2="460" y2="290"/>
+		<line x1="480" y1="130" x2="480" y2="290"/>
+		<line x1="500" y1="130" x2="500" y2="290"/>
+	</g>
+
+	<!-- Top frame of the mesh enclosure -->
+	<line x1="186" y1="130" x2="514" y2="130" stroke="#5a4a3a" stroke-width="2"/>
+
+	<!-- Carrot foliage inside the bed -->
+	<g transform="translate(230 285)">
+		<line x1="0" y1="0" x2="-4" y2="-30" stroke="#6b8e6f" stroke-width="2"/>
+		<line x1="0" y1="0" x2="0" y2="-35" stroke="#6b8e6f" stroke-width="2"/>
+		<line x1="0" y1="0" x2="4" y2="-30" stroke="#6b8e6f" stroke-width="2"/>
+		<ellipse cx="-4" cy="-30" rx="2" ry="3" fill="#8fac93"/>
+		<ellipse cx="0" cy="-35" rx="2" ry="3" fill="#8fac93"/>
+		<ellipse cx="4" cy="-30" rx="2" ry="3" fill="#8fac93"/>
+	</g>
+	<g transform="translate(280 285)">
+		<line x1="0" y1="0" x2="-4" y2="-32" stroke="#6b8e6f" stroke-width="2"/>
+		<line x1="0" y1="0" x2="0" y2="-38" stroke="#6b8e6f" stroke-width="2"/>
+		<line x1="0" y1="0" x2="4" y2="-32" stroke="#6b8e6f" stroke-width="2"/>
+		<ellipse cx="-4" cy="-32" rx="2" ry="3" fill="#8fac93"/>
+		<ellipse cx="0" cy="-38" rx="2" ry="3" fill="#8fac93"/>
+		<ellipse cx="4" cy="-32" rx="2" ry="3" fill="#8fac93"/>
+	</g>
+	<g transform="translate(340 285)">
+		<line x1="0" y1="0" x2="-4" y2="-30" stroke="#6b8e6f" stroke-width="2"/>
+		<line x1="0" y1="0" x2="0" y2="-35" stroke="#6b8e6f" stroke-width="2"/>
+		<line x1="0" y1="0" x2="4" y2="-30" stroke="#6b8e6f" stroke-width="2"/>
+		<ellipse cx="-4" cy="-30" rx="2" ry="3" fill="#8fac93"/>
+		<ellipse cx="0" cy="-35" rx="2" ry="3" fill="#8fac93"/>
+		<ellipse cx="4" cy="-30" rx="2" ry="3" fill="#8fac93"/>
+	</g>
+	<g transform="translate(400 285)">
+		<line x1="0" y1="0" x2="-4" y2="-33" stroke="#6b8e6f" stroke-width="2"/>
+		<line x1="0" y1="0" x2="0" y2="-38" stroke="#6b8e6f" stroke-width="2"/>
+		<line x1="0" y1="0" x2="4" y2="-33" stroke="#6b8e6f" stroke-width="2"/>
+		<ellipse cx="-4" cy="-33" rx="2" ry="3" fill="#8fac93"/>
+		<ellipse cx="0" cy="-38" rx="2" ry="3" fill="#8fac93"/>
+		<ellipse cx="4" cy="-33" rx="2" ry="3" fill="#8fac93"/>
+	</g>
+	<g transform="translate(460 285)">
+		<line x1="0" y1="0" x2="-4" y2="-30" stroke="#6b8e6f" stroke-width="2"/>
+		<line x1="0" y1="0" x2="0" y2="-35" stroke="#6b8e6f" stroke-width="2"/>
+		<line x1="0" y1="0" x2="4" y2="-30" stroke="#6b8e6f" stroke-width="2"/>
+		<ellipse cx="-4" cy="-30" rx="2" ry="3" fill="#8fac93"/>
+		<ellipse cx="0" cy="-35" rx="2" ry="3" fill="#8fac93"/>
+		<ellipse cx="4" cy="-30" rx="2" ry="3" fill="#8fac93"/>
+	</g>
+
+	<!-- Carrot fly outside, low to ground -->
+	<g transform="translate(105 285)">
+		<!-- Body -->
+		<ellipse cx="0" cy="0" rx="5" ry="2.5" fill="#3d3428"/>
+		<!-- Wings -->
+		<ellipse cx="-1" cy="-3" rx="4" ry="2" fill="#c3c4c7" opacity="0.7"/>
+		<ellipse cx="2" cy="-3" rx="4" ry="2" fill="#c3c4c7" opacity="0.7"/>
+		<!-- Legs (simplified) -->
+		<line x1="-2" y1="2" x2="-4" y2="6" stroke="#3d3428" stroke-width="0.6"/>
+		<line x1="2" y1="2" x2="4" y2="6" stroke="#3d3428" stroke-width="0.6"/>
+	</g>
+	<text x="105" y="270" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3d3428">carrot fly</text>
+
+	<!-- Flight path attempt with rejection -->
+	<path d="M 105 280 Q 130 240 155 230 Q 175 225 180 235" stroke="#c86f4a" stroke-width="2" fill="none" stroke-dasharray="4,3" stroke-linecap="round"/>
+	<line x1="172" y1="226" x2="190" y2="244" stroke="#c86f4a" stroke-width="3" stroke-linecap="round"/>
+	<line x1="172" y1="244" x2="190" y2="226" stroke="#c86f4a" stroke-width="3" stroke-linecap="round"/>
+
+	<!-- Height dimension -->
+	<line x1="555" y1="130" x2="555" y2="290" stroke="#3d3428" stroke-width="1.5"/>
+	<line x1="548" y1="130" x2="562" y2="130" stroke="#3d3428" stroke-width="1.5"/>
+	<line x1="548" y1="290" x2="562" y2="290" stroke="#3d3428" stroke-width="1.5"/>
+	<text x="575" y="215" font-family="sans-serif" font-size="14" font-weight="600" fill="#3d3428">60 cm</text>
+
+	<!-- Caption under -->
+	<text x="350" y="328" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">Stretch fine insect mesh between four corner posts. Tuck the bottom edge into the soil.</text>
+</svg>

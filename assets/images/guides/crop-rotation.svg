@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-labelledby="ttl desc">
+	<title id="ttl">A four-year crop rotation</title>
+	<desc id="desc">Four allotment beds laid out in a two-by-two grid, each planted with a different crop family. Each year every group moves clockwise to the next bed. Legumes fix nitrogen for the hungry brassicas that follow.</desc>
+
+	<rect width="600" height="600" fill="#fdfcfb"/>
+
+	<text x="300" y="38" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="600" fill="#3d3428">A four-year crop rotation</text>
+	<text x="300" y="58" text-anchor="middle" font-family="sans-serif" font-size="12" font-style="italic" fill="#5c5347">Each year, every group moves one bed clockwise</text>
+
+	<!-- Top-left: Legumes -->
+	<g>
+		<rect x="80" y="100" width="200" height="170" fill="#f5f3f0" stroke="#5a4a3a" stroke-width="2.5" rx="6"/>
+		<!-- Pea/bean plants -->
+		<line x1="120" y1="240" x2="120" y2="190" stroke="#6b8e6f" stroke-width="3"/>
+		<ellipse cx="115" cy="195" rx="8" ry="5" fill="#6b8e6f"/>
+		<ellipse cx="125" cy="200" rx="8" ry="5" fill="#8fac93"/>
+		<line x1="170" y1="240" x2="170" y2="180" stroke="#6b8e6f" stroke-width="3"/>
+		<ellipse cx="163" cy="185" rx="9" ry="5" fill="#6b8e6f"/>
+		<ellipse cx="178" cy="195" rx="9" ry="5" fill="#8fac93"/>
+		<line x1="220" y1="240" x2="220" y2="195" stroke="#6b8e6f" stroke-width="3"/>
+		<ellipse cx="215" cy="200" rx="8" ry="5" fill="#6b8e6f"/>
+		<ellipse cx="225" cy="205" rx="8" ry="5" fill="#8fac93"/>
+		<!-- Pods hanging -->
+		<rect x="118" y="205" width="2" height="12" fill="#5a7a5e"/>
+		<rect x="172" y="200" width="2" height="14" fill="#5a7a5e"/>
+		<rect x="218" y="210" width="2" height="12" fill="#5a7a5e"/>
+
+		<text x="180" y="135" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#3d3428">Legumes</text>
+		<text x="180" y="155" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">peas, beans</text>
+		<text x="180" y="262" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6b8e6f" font-style="italic">fix nitrogen in the soil</text>
+	</g>
+
+	<!-- Top-right: Brassicas -->
+	<g>
+		<rect x="320" y="100" width="200" height="170" fill="#f5f3f0" stroke="#5a4a3a" stroke-width="2.5" rx="6"/>
+		<!-- Cabbage heads -->
+		<circle cx="370" cy="220" r="20" fill="#8fac93"/>
+		<circle cx="370" cy="215" r="12" fill="#6b8e6f"/>
+		<circle cx="425" cy="220" r="20" fill="#8fac93"/>
+		<circle cx="425" cy="215" r="12" fill="#6b8e6f"/>
+		<circle cx="480" cy="220" r="20" fill="#8fac93"/>
+		<circle cx="480" cy="215" r="12" fill="#6b8e6f"/>
+
+		<text x="420" y="135" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#3d3428">Brassicas</text>
+		<text x="420" y="155" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">cabbage, kale, broccoli</text>
+		<text x="420" y="262" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#5c5347" font-style="italic">love the nitrogen the legumes left</text>
+	</g>
+
+	<!-- Bottom-right: Solanums -->
+	<g>
+		<rect x="320" y="330" width="200" height="170" fill="#f5f3f0" stroke="#5a4a3a" stroke-width="2.5" rx="6"/>
+		<!-- Potato ridges -->
+		<path d="M 350 470 Q 380 445 410 470 Z" fill="#8B6F47"/>
+		<path d="M 350 470 Q 380 445 410 470" stroke="#5a4a3a" stroke-width="1.5" fill="none"/>
+		<line x1="380" y1="445" x2="380" y2="425" stroke="#5a7a5e" stroke-width="2"/>
+		<ellipse cx="375" cy="420" rx="10" ry="6" fill="#6b8e6f"/>
+
+		<path d="M 425 470 Q 455 445 485 470 Z" fill="#8B6F47"/>
+		<path d="M 425 470 Q 455 445 485 470" stroke="#5a4a3a" stroke-width="1.5" fill="none"/>
+		<line x1="455" y1="445" x2="455" y2="425" stroke="#5a7a5e" stroke-width="2"/>
+		<ellipse cx="450" cy="420" rx="10" ry="6" fill="#6b8e6f"/>
+
+		<text x="420" y="365" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#3d3428">Potatoes</text>
+		<text x="420" y="385" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">(and tomatoes)</text>
+	</g>
+
+	<!-- Bottom-left: Roots & alliums -->
+	<g>
+		<rect x="80" y="330" width="200" height="170" fill="#f5f3f0" stroke="#5a4a3a" stroke-width="2.5" rx="6"/>
+		<!-- Carrot tops -->
+		<g transform="translate(120 480)">
+			<line x1="0" y1="0" x2="-3" y2="-25" stroke="#6b8e6f" stroke-width="2"/>
+			<line x1="0" y1="0" x2="0" y2="-30" stroke="#6b8e6f" stroke-width="2"/>
+			<line x1="0" y1="0" x2="3" y2="-25" stroke="#6b8e6f" stroke-width="2"/>
+		</g>
+		<g transform="translate(150 480)">
+			<line x1="0" y1="0" x2="-3" y2="-25" stroke="#6b8e6f" stroke-width="2"/>
+			<line x1="0" y1="0" x2="0" y2="-30" stroke="#6b8e6f" stroke-width="2"/>
+			<line x1="0" y1="0" x2="3" y2="-25" stroke="#6b8e6f" stroke-width="2"/>
+		</g>
+		<!-- Onion bulbs -->
+		<ellipse cx="200" cy="470" rx="12" ry="14" fill="#e8a64e"/>
+		<line x1="200" y1="456" x2="200" y2="438" stroke="#6b8e6f" stroke-width="2"/>
+		<ellipse cx="230" cy="470" rx="12" ry="14" fill="#e8a64e"/>
+		<line x1="230" y1="456" x2="230" y2="438" stroke="#6b8e6f" stroke-width="2"/>
+
+		<text x="180" y="365" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="700" fill="#3d3428">Roots &amp; Onions</text>
+		<text x="180" y="385" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">carrots, parsnips, garlic, onions</text>
+	</g>
+
+	<!-- Clockwise arrows between adjacent beds -->
+	<!-- Top: Legumes → Brassicas (right) -->
+	<path d="M 290 185 Q 300 175 310 185" stroke="#c86f4a" stroke-width="3" fill="none" stroke-linecap="round"/>
+	<polygon points="307,180 316,185 307,190" fill="#c86f4a"/>
+
+	<!-- Right: Brassicas → Solanums (down) -->
+	<path d="M 415 285 Q 425 295 415 305" stroke="#c86f4a" stroke-width="3" fill="none" stroke-linecap="round"/>
+	<polygon points="410,302 415,311 420,302" fill="#c86f4a"/>
+
+	<!-- Bottom: Solanums → Roots (left) -->
+	<path d="M 310 415 Q 300 425 290 415" stroke="#c86f4a" stroke-width="3" fill="none" stroke-linecap="round"/>
+	<polygon points="293,420 284,415 293,410" fill="#c86f4a"/>
+
+	<!-- Left: Roots → Legumes (up) -->
+	<path d="M 185 315 Q 175 305 185 295" stroke="#c86f4a" stroke-width="3" fill="none" stroke-linecap="round"/>
+	<polygon points="190,298 185,289 180,298" fill="#c86f4a"/>
+
+	<!-- Year-arrow legend -->
+	<text x="300" y="560" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#3d3428">Year 1 → 2 → 3 → 4 → back to Year 1</text>
+	<text x="300" y="580" text-anchor="middle" font-family="sans-serif" font-size="11" font-style="italic" fill="#5c5347">A bed only grows the same group once every four years.</text>
+</svg>

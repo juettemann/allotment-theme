@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" role="img" aria-labelledby="ttl desc">
+	<title id="ttl">Soil texture squeeze test</title>
+	<desc id="desc">Three samples of soil after being squeezed in the hand. Sandy soil falls apart into separate grains. Loam holds a soft, crumbly ball. Clay can be rolled into a long, smooth ribbon.</desc>
+
+	<rect width="700" height="320" fill="#fdfcfb"/>
+	<text x="350" y="35" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-style="italic" fill="#5c5347">Wet a small handful, squeeze it, then try to roll it</text>
+
+	<line x1="233" y1="60" x2="233" y2="280" stroke="#e0d8ce" stroke-width="1"/>
+	<line x1="466" y1="60" x2="466" y2="280" stroke="#e0d8ce" stroke-width="1"/>
+
+	<!-- Sandy: scattered grains -->
+	<g transform="translate(115 175)">
+		<circle cx="0" cy="-5" r="12" fill="#c8a87a"/>
+		<circle cx="-20" cy="15" r="6" fill="#b8916a"/>
+		<circle cx="-28" cy="30" r="5" fill="#c8a87a"/>
+		<circle cx="22" cy="18" r="7" fill="#c8a87a"/>
+		<circle cx="32" cy="33" r="5" fill="#b8916a"/>
+		<circle cx="-3" cy="32" r="4" fill="#b8916a"/>
+		<circle cx="-15" cy="48" r="4" fill="#c8a87a"/>
+		<circle cx="15" cy="52" r="3" fill="#b8916a"/>
+		<circle cx="-35" cy="48" r="3" fill="#c8a87a"/>
+		<circle cx="38" cy="50" r="3" fill="#b8916a"/>
+	</g>
+	<text x="115" y="90" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="600" fill="#3d3428">Sandy</text>
+	<text x="115" y="245" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">Falls apart in your hand.</text>
+	<text x="115" y="262" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">Drains fast, needs lots</text>
+	<text x="115" y="278" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">of organic matter.</text>
+
+	<!-- Loam: soft ball -->
+	<g transform="translate(350 175)">
+		<ellipse cx="0" cy="5" rx="38" ry="35" fill="#8B6F47"/>
+		<ellipse cx="-8" cy="-3" rx="22" ry="14" fill="#7a5f3c" opacity="0.6"/>
+		<circle cx="-12" cy="-8" r="2.5" fill="#5a4a3a"/>
+		<circle cx="10" cy="-5" r="2.5" fill="#5a4a3a"/>
+		<circle cx="-5" cy="18" r="2.5" fill="#5a4a3a"/>
+		<circle cx="16" cy="14" r="2" fill="#5a4a3a"/>
+		<circle cx="-20" cy="10" r="2" fill="#5a4a3a"/>
+	</g>
+	<text x="350" y="90" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="600" fill="#3d3428">Loam</text>
+	<text x="350" y="245" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">Holds a soft ball but</text>
+	<text x="350" y="262" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">crumbles when you</text>
+	<text x="350" y="278" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">poke it. Ideal.</text>
+
+	<!-- Clay: long ribbon -->
+	<g transform="translate(580 175)">
+		<path d="M -50 -10 Q -30 5 -15 -10 Q 5 -25 25 -8 Q 42 6 50 22" stroke="#5a4a3a" stroke-width="15" fill="none" stroke-linecap="round"/>
+		<path d="M -50 -10 Q -30 5 -15 -10 Q 5 -25 25 -8 Q 42 6 50 22" stroke="#3d3428" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.4"/>
+	</g>
+	<text x="580" y="90" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="600" fill="#3d3428">Clay</text>
+	<text x="580" y="245" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">Rolls into a long, smooth</text>
+	<text x="580" y="262" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">ribbon. Holds nutrients</text>
+	<text x="580" y="278" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5c5347">well, slow to drain.</text>
+
+	<text x="350" y="308" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#6b8e6f">Most plots at Burnside and Vinery Road are clay.</text>
+</svg>
