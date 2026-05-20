@@ -188,14 +188,15 @@
 
 .at-nav__brand--custom-logo .custom-logo {
 	display: block;
-	max-height: 56px;
+	max-height: var(--at-logo-height, 64px);
 	width: auto;
 	height: auto;
 }
 
+/* Mobile: cap so the hamburger has room, regardless of customiser value. */
 @media (max-width: 767px) {
 	.at-nav__brand--custom-logo .custom-logo {
-		max-height: 44px;
+		max-height: min(var(--at-logo-height, 64px), 48px);
 	}
 }
 

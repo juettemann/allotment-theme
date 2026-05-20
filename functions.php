@@ -97,6 +97,20 @@ function allotment_theme_inject_icon_sprite() {
 add_action( 'wp_body_open', 'allotment_theme_inject_icon_sprite' );
 
 /**
+ * Emit the --at-logo-height CSS custom property based on the customiser
+ * setting. Clamped to a safe range so users can't break the nav layout.
+ */
+function allotment_theme_logo_height_style() {
+	$height = (int) get_theme_mod( 'nav_logo_height', 64 );
+	$height = max( 32, min( 96, $height ) );
+	printf(
+		'<style id="allotment-theme-logo-height">:root{--at-logo-height:%dpx}</style>',
+		$height
+	);
+}
+add_action( 'wp_head', 'allotment_theme_logo_height_style' );
+
+/**
  * Add a body class flag when the page renders the allotment-manager
  * member portal shortcode, so the page container can widen for the table.
  */

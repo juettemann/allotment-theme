@@ -15,6 +15,31 @@ defined( 'ABSPATH' ) || exit;
 function allotment_theme_customize_register( $wp_customize ) {
 	$d = allotment_text_defaults();
 
+	/* ============ Site Identity — Logo size ============ */
+	// Adds a logo-height control to the built-in Site Identity section, so it
+	// sits next to the Logo upload itself rather than buried in a theme panel.
+	$wp_customize->add_setting( 'nav_logo_height', [
+		'default'           => 64,
+		'sanitize_callback' => 'absint',
+		'transport'         => 'refresh',
+	] );
+	$wp_customize->add_control( 'nav_logo_height', [
+		'label'       => __( 'Logo height (px)', 'allotment-theme' ),
+		'description' => __( 'Adjust how tall the uploaded logo appears in the navigation bar. Mobile is capped at 48px regardless so the menu button has room.', 'allotment-theme' ),
+		'section'     => 'title_tagline',
+		'type'        => 'select',
+		'choices'     => [
+			40 => __( '40px — compact', 'allotment-theme' ),
+			48 => __( '48px', 'allotment-theme' ),
+			56 => __( '56px', 'allotment-theme' ),
+			64 => __( '64px — recommended', 'allotment-theme' ),
+			72 => __( '72px', 'allotment-theme' ),
+			80 => __( '80px', 'allotment-theme' ),
+			88 => __( '88px — large', 'allotment-theme' ),
+			96 => __( '96px — extra large', 'allotment-theme' ),
+		],
+	] );
+
 	$wp_customize->add_panel( 'allotment_theme_panel', [
 		'title'    => __( 'Allotment Theme', 'allotment-theme' ),
 		'priority' => 130,
