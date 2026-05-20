@@ -829,3 +829,75 @@ body.am-portal .at-page__inner {
 .search-form .search-field {
 	flex: 1;
 }
+
+/* ===== Growing-guide month cards =====
+   Used on the "What to Sow, Month by Month" page to break the 12-month
+   list into colour-coded cards by season. Single column on mobile, two
+   columns on tablet and up. Borders carry the season hue, backgrounds
+   are tinted versions of the same. */
+.guide-months {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--space-4);
+	margin: var(--space-6) 0 var(--space-8);
+}
+
+@media (min-width: 720px) {
+	.guide-months {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.guide-month {
+	padding: var(--space-4) var(--space-5);
+	border-radius: var(--radius-lg);
+	border-left: 6px solid;
+	background-color: var(--color-card);
+}
+
+.guide-month h2 {
+	margin: 0 0 var(--space-2);
+	font-size: var(--font-size-xl);
+}
+
+.guide-month p {
+	margin: 0;
+	font-size: var(--font-size-md);
+	line-height: var(--line-height-relaxed);
+}
+
+/* Winter (Dec, Jan, Feb) — cool, muted */
+.guide-month--winter {
+	border-left-color: #6b87a3;
+	background-color: #eef2f6;
+}
+.guide-month--winter h2 {
+	color: #3f5469;
+}
+
+/* Spring (Mar, Apr, May) — sage primary */
+.guide-month--spring {
+	border-left-color: var(--color-primary);
+	background-color: #eef3ef;
+}
+.guide-month--spring h2 {
+	color: var(--color-primary-hover);
+}
+
+/* Summer (Jun, Jul, Aug) — accent yellow */
+.guide-month--summer {
+	border-left-color: var(--color-accent);
+	background-color: #fdf3df;
+}
+.guide-month--summer h2 {
+	color: #8a5d1d;
+}
+
+/* Autumn (Sep, Oct, Nov) — terracotta */
+.guide-month--autumn {
+	border-left-color: var(--color-secondary);
+	background-color: #f8ece4;
+}
+.guide-month--autumn h2 {
+	color: #7a3a1d;
+}
