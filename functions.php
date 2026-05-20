@@ -102,7 +102,7 @@ add_action( 'wp_body_open', 'allotment_theme_inject_icon_sprite' );
  */
 function allotment_theme_logo_height_style() {
 	$height = (int) get_theme_mod( 'nav_logo_height', 64 );
-	$height = max( 32, min( 96, $height ) );
+	$height = max( 32, min( 160, $height ) );
 	printf(
 		'<style id="allotment-theme-logo-height">:root{--at-logo-height:%dpx}</style>',
 		$height
