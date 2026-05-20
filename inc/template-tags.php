@@ -29,9 +29,23 @@ function allotment_mod_html( $key, $default = '' ) {
 }
 
 /**
- * Site brand mark — links to home, shows logo + name.
+ * Site brand mark — links to home.
+ *
+ * Two render paths:
+ * - When a custom logo is set in the Customiser, defer to the_custom_logo()
+ *   which provides its own anchor. The sprout circle is hidden so we don't
+ *   double-mark the brand.
+ * - Otherwise, render the sprout circle + site name wrapped in our own
+ *   anchor.
  */
 function allotment_site_brand() {
+	if ( has_custom_logo() ) {
+		echo '<div class="at-nav__brand at-nav__brand--custom-logo">';
+		the_custom_logo();
+		echo '</div>';
+		return;
+	}
+
 	$home = esc_url( home_url( '/' ) );
 	$name = get_bloginfo( 'name' );
 	?>
@@ -39,11 +53,7 @@ function allotment_site_brand() {
 		<span class="at-nav__logo" aria-hidden="true">
 			<?php allotment_icon( 'sprout' ); ?>
 		</span>
-		<?php if ( has_custom_logo() ) : ?>
-			<?php the_custom_logo(); ?>
-		<?php else : ?>
-			<span class="at-nav__brand-name"><?php echo esc_html( $name ); ?></span>
-		<?php endif; ?>
+		<span class="at-nav__brand-name"><?php echo esc_html( $name ); ?></span>
 	</a>
 	<?php
 }
@@ -133,7 +143,11 @@ function allotment_text_defaults() {
 		'hero_primary_text'   => __( 'Apply for a Plot', 'allotment-theme' ),
 		'hero_primary_url'    => '/allotment-application/',
 		'hero_secondary_text' => __( 'Get in Touch', 'allotment-theme' ),
-		'hero_secondary_url'  => '#contact',
+		// Default points at the auto-created /contact page (made by
+		// Page_Creator::create_default_pages() on first activation). An
+		// admin who wants the button to scroll to a section, open mailto:,
+		// or jump elsewhere can override via Appearance → Customize.
+		'hero_secondary_url'  => '/contact/',
 		'stat_number'      => '250+',
 		'stat_label'       => __( 'Active Members', 'allotment-theme' ),
 		'features_title'   => __( 'Why Join Us?', 'allotment-theme' ),
@@ -143,7 +157,7 @@ function allotment_text_defaults() {
 		'cta_primary_text'   => __( 'Join Waiting List', 'allotment-theme' ),
 		'cta_primary_url'    => '/allotment-application/',
 		'cta_secondary_text' => __( 'Visit Us', 'allotment-theme' ),
-		'cta_secondary_url'  => '#contact',
+		'cta_secondary_url'  => '/contact/',
 		'footer_tagline'   => __( 'Growing together in our community', 'allotment-theme' ),
 		'footer_address'   => "Meadowview Lane\nBristol BS5 8TH",
 		'footer_email'     => 'hello@example.org.uk',

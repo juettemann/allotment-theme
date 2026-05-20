@@ -173,6 +173,26 @@
 	height: 20px;
 }
 
+/* Custom-logo render path (Appearance → Customise → Site Identity → Logo).
+   Cap the rendered height so any uploaded image fits the 64px nav. WP
+   outputs <a class="custom-logo-link"><img class="custom-logo">. */
+.at-nav__brand--custom-logo {
+	display: flex;
+	align-items: center;
+}
+
+.at-nav__brand--custom-logo .custom-logo-link {
+	display: inline-flex;
+	align-items: center;
+}
+
+.at-nav__brand--custom-logo .custom-logo {
+	display: block;
+	max-height: 40px;
+	width: auto;
+	height: auto;
+}
+
 .at-nav__menu {
 	display: none;
 	align-items: center;
