@@ -29,7 +29,7 @@ $account_label = $is_logged_in
 						'theme_location' => 'primary',
 						'container'      => false,
 						'items_wrap'     => '%3$s',
-						'depth'          => 1,
+						'depth'          => 0,
 						'fallback_cb'    => false,
 					] );
 				} else {

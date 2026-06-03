@@ -238,6 +238,47 @@
 	font-weight: var(--font-weight-medium);
 }
 
+/* Desktop dropdown sub-menus (`.menu-item-has-children` is WP-default). */
+.at-nav__menu li.menu-item-has-children {
+	position: relative;
+}
+
+.at-nav__menu .sub-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	min-width: 14rem;
+	list-style: none;
+	margin: 0;
+	padding: var(--space-2) 0;
+	background: var(--color-background);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-lg);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(0.5rem);
+	transition: opacity var(--transition-normal), visibility var(--transition-normal), transform var(--transition-normal);
+	z-index: 50;
+}
+
+.at-nav__menu li.menu-item-has-children:hover > .sub-menu,
+.at-nav__menu li.menu-item-has-children:focus-within > .sub-menu {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.at-nav__menu .sub-menu li {
+	margin: 0;
+}
+
+.at-nav__menu .sub-menu a {
+	display: block;
+	padding: var(--space-2) var(--space-4);
+	white-space: nowrap;
+}
+
 .at-nav__toggle {
 	display: inline-flex;
 	align-items: center;
@@ -290,6 +331,19 @@
 
 .at-nav__mobile .at-btn {
 	margin-top: var(--space-3);
+}
+
+/* Mobile sub-menus render inline beneath the parent, indented. */
+.at-nav__mobile .sub-menu {
+	list-style: none;
+	margin: 0 0 0 var(--space-2);
+	padding-left: var(--space-4);
+	border-left: 2px solid var(--color-border);
+}
+
+.at-nav__mobile .sub-menu a {
+	padding-block: var(--space-2);
+	font-weight: var(--font-weight-normal);
 }
 
 /* ===== Hero ===== */
@@ -719,12 +773,29 @@
 }
 
 .at-page__inner {
-	max-width: var(--container-narrow);
+	/* Default to --container-max (1280px) matching .container and the site
+	 * header. The earlier --container-narrow (768px) default left big left/
+	 * right gutters on wide screens for site-section pages like /burnside/,
+	 * /vinery-road/, store etc. Pages that genuinely want prose width (e.g.
+	 * About Us essays) can opt in via `.at-page__inner--prose` on the
+	 * template wrapper, or be re-styled via the editor. */
+	max-width: var(--container-max);
 	margin: 0 auto;
+}
+
+.at-page__inner--prose {
+	max-width: var(--container-prose);
+}
+
+.at-page__inner--narrow {
+	max-width: var(--container-narrow);
 }
 
 .has-am-member-portal .at-page__inner,
 body.am-portal .at-page__inner {
+	/* Kept as defensive belt-and-braces: the default is already --container-max,
+	 * but an explicit re-statement here guards against a future theme tweak
+	 * that re-narrows the page default without considering the portal. */
 	max-width: var(--container-max);
 }
 
