@@ -719,12 +719,29 @@
 }
 
 .at-page__inner {
-	max-width: var(--container-narrow);
+	/* Default to --container-max (1280px) matching .container and the site
+	 * header. The earlier --container-narrow (768px) default left big left/
+	 * right gutters on wide screens for site-section pages like /burnside/,
+	 * /vinery-road/, store etc. Pages that genuinely want prose width (e.g.
+	 * About Us essays) can opt in via `.at-page__inner--prose` on the
+	 * template wrapper, or be re-styled via the editor. */
+	max-width: var(--container-max);
 	margin: 0 auto;
+}
+
+.at-page__inner--prose {
+	max-width: var(--container-prose);
+}
+
+.at-page__inner--narrow {
+	max-width: var(--container-narrow);
 }
 
 .has-am-member-portal .at-page__inner,
 body.am-portal .at-page__inner {
+	/* Kept as defensive belt-and-braces: the default is already --container-max,
+	 * but an explicit re-statement here guards against a future theme tweak
+	 * that re-narrows the page default without considering the portal. */
 	max-width: var(--container-max);
 }
 
