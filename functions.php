@@ -58,21 +58,54 @@ function allotment_theme_setup() {
 add_action( 'after_setup_theme', 'allotment_theme_setup' );
 
 /**
+ * Version an asset by its modification time, so a changed file gets a new URL.
+ *
+ * ALLOTMENT_THEME_VERSION has been 1.0.0 since the first release and is not
+ * bumped per change, so a URL versioned with it never changes and a browser
+ * that has the file cached keeps the old bytes. A deploy `git pull`s the theme,
+ * which sets the mtime of every file it changes.
+ *
+ * @param string $relative_path Path inside the theme directory.
+ * @return string
+ */
+function allotment_theme_asset_version( $relative_path ) {
+	$path = get_template_directory() . '/' . $relative_path;
+	return file_exists( $path ) ? (string) filemtime( $path ) : ALLOTMENT_THEME_VERSION;
+}
+
+/**
  * Enqueue front-end styles and scripts.
+ *
+ * The stylesheets are enqueued one by one rather than @imported from style.css:
+ * an @import URL carries no version, so no change to them could reach a
+ * returning visitor until the browser's cache happened to expire.
  */
 function allotment_theme_enqueue_assets() {
+	$deps = [];
+	foreach ( [ 'variables', 'base', 'layout', 'components' ] as $name ) {
+		$handle = 'allotment-theme-' . $name;
+		wp_enqueue_style(
+			$handle,
+			get_template_directory_uri() . '/assets/css/' . $name . '.css',
+			$deps,
+			allotment_theme_asset_version( 'assets/css/' . $name . '.css' )
+		);
+		$deps = [ $handle ];
+	}
+
+	// Last, so a rule added to style.css still overrides the files above.
 	wp_enqueue_style(
 		'allotment-theme',
 		get_stylesheet_uri(),
-		[],
-		ALLOTMENT_THEME_VERSION
+		$deps,
+		allotment_theme_asset_version( 'style.css' )
 	);
 
 	wp_enqueue_script(
 		'allotment-theme',
 		get_template_directory_uri() . '/assets/js/main.js',
 		[],
-		ALLOTMENT_THEME_VERSION,
+		allotment_theme_asset_version( 'assets/js/main.js' ),
 		true
 	);
 

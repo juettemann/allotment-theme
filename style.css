@@ -18,7 +18,9 @@ Icons in assets/icons/sprite.svg are derived from Lucide (https://lucide.dev),
 licensed under the ISC License. See ATTRIBUTIONS.md for credits.
 */
 
-@import url("assets/css/variables.css");
-@import url("assets/css/base.css");
-@import url("assets/css/layout.css");
-@import url("assets/css/components.css");
+/*
+ * The stylesheets in assets/css/ are enqueued individually by
+ * allotment_theme_enqueue_assets() in functions.php, each versioned by its
+ * modification time. Do not @import them here: an @import URL carries no
+ * version, so browsers keep serving the old file after a change.
+ */
