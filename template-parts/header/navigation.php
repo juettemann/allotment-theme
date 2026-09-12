@@ -7,11 +7,13 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$login_url = wp_login_url( home_url( '/' ) );
-$portal    = get_page_by_path( 'member-portal' );
-if ( $portal && is_user_logged_in() ) {
-	$login_url = get_permalink( $portal );
-}
+$portal     = get_page_by_path( 'member-portal' );
+$portal_url = $portal ? get_permalink( $portal ) : home_url( '/' );
+// Logged out: go to wp-login and return to the member portal afterwards (NOT
+// home — an explicit redirect_to=home was sending members to the homepage and
+// overriding the plugin's login_redirect filter). Logged in: link straight to
+// the portal (the button label becomes "Member Portal" below).
+$login_url = is_user_logged_in() ? $portal_url : wp_login_url( $portal_url );
 $is_logged_in = is_user_logged_in();
 $account_label = $is_logged_in
 	? __( 'Member Portal', 'allotment-theme' )
@@ -67,7 +69,7 @@ $account_label = $is_logged_in
 					'theme_location' => 'primary',
 					'container'      => false,
 					'items_wrap'     => '<ul>%3$s</ul>',
-					'depth'          => 1,
+					'depth'          => 0,
 					'fallback_cb'    => false,
 				] );
 			} else {
