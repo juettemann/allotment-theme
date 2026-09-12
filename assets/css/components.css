@@ -818,6 +818,18 @@ body.am-portal .at-page__inner {
 	margin-top: var(--space-4);
 }
 
+/*
+ * Links written into page and post text. Buttons and other styled links carry
+ * a class and keep their own look. --color-primary is 3.58:1 on the page
+ * background, below the 4.5:1 WCAG AA asks of body text, and bold alone does
+ * not lift 16px text into the large-text threshold; --color-primary-hover is
+ * 4.68:1. Hover keeps base.css's underline.
+ */
+.at-page__content a:not([class]) {
+	color: var(--color-primary-hover);
+	font-weight: var(--font-weight-bold);
+}
+
 /* ===== Posts ===== */
 .at-post-card {
 	background-color: var(--color-card);
