@@ -814,6 +814,23 @@ body.am-portal .at-page__inner {
 	font-size: var(--font-size-sm);
 }
 
+/*
+ * A featured image fills the content column. The banner on
+ * /about-us/committee/ is 1024px wide inside a 1216px column, so without
+ * this it stops short of everything below it and reads as a misalignment
+ * rather than a choice.
+ *
+ * Width only, deliberately: the img keeps WordPress's own
+ * `sizes="(max-width: 1024px) 100vw, 1024px"`, so a 1x screen still fetches
+ * the 1024px file and scales it up by a fifth. Serving the image at `full`
+ * instead would widen `sizes` to the real slot and send that screen the
+ * 1536px variant, which for this banner is a 2.1MB PNG against 958KB. Once
+ * the banner is a JPEG, size it `full` and give it an accurate `sizes`.
+ */
+.at-page__featured img {
+	width: 100%;
+}
+
 .at-page__content > * + * {
 	margin-top: var(--space-4);
 }
