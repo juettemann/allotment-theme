@@ -984,3 +984,219 @@ body.am-portal .at-page__inner {
 .guide-month--autumn h2 {
 	color: #7a3a1d;
 }
+
+/* ===== Committee cards =====
+   Used on /about-us/committee/ to turn the run of names, photographs and
+   bios into a two-column card grid. Same shape as the .guide-month cards
+   above: the page content holds plain HTML carrying these classes, the
+   look lives here, so the committee can add a person by copying a card.
+
+   Three role colours, reusing the season cards' inks so the two pages
+   agree: sage for the officers, terracotta for the site managers, amber
+   for the committee members. Each variant sets the three custom
+   properties the parts below read, so a new role is one rule. */
+.committee-note {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space-4);
+	margin: var(--space-6) 0 var(--space-10);
+	padding: var(--space-5) var(--space-6);
+	border: 1px solid var(--color-border);
+	border-left: 6px solid var(--color-primary);
+	border-radius: var(--radius-lg);
+	background-color: var(--color-muted);
+}
+
+.committee-note p {
+	max-width: 52ch;
+	margin: 0;
+	color: var(--color-text-soft);
+}
+
+.committee-note .at-btn {
+	flex: 0 0 auto;
+}
+
+/* The closing "join us" note, in amber rather than sage. */
+.committee-note--join {
+	margin: var(--space-12) 0 0;
+	border-left-color: var(--color-accent);
+	background-color: #fdf3df;
+}
+
+.committee-heading {
+	margin: var(--space-12) 0 var(--space-6);
+	font-size: var(--font-size-2xl);
+}
+
+.committee-heading::after {
+	content: "";
+	display: block;
+	width: 3rem;
+	height: 3px;
+	margin-top: var(--space-3);
+	border-radius: var(--radius-full);
+	background-color: var(--color-primary);
+}
+
+/* The first heading follows the contact note, which already carries the
+ * gap. Without this the two margins stack into a hole. */
+.committee-note + .committee-heading {
+	margin-top: 0;
+}
+
+.committee-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--space-6);
+}
+
+@media (min-width: 900px) {
+	.committee-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.committee-card {
+	--committee-line: var(--color-primary);
+	--committee-tint: var(--color-primary-tint);
+	--committee-ink: var(--color-primary-hover);
+
+	display: flex;
+	align-items: flex-start;
+	/* Bios run from nothing to a hundred and thirty words, so a card hugs
+	 * its own content instead of stretching to its neighbour's height. */
+	align-self: start;
+	gap: var(--space-5);
+	padding: var(--space-6);
+	border: 1px solid var(--color-border-strong);
+	border-radius: var(--radius-xl);
+	background-color: var(--color-card);
+	transition: box-shadow var(--transition-normal);
+}
+
+.committee-card:hover {
+	box-shadow: var(--shadow-lg);
+}
+
+.committee-card--manager {
+	--committee-line: var(--color-secondary);
+	--committee-tint: #f8ece4;
+	--committee-ink: #7a3a1d;
+}
+
+.committee-card--member {
+	--committee-line: var(--color-accent);
+	--committee-tint: #fdf3df;
+	--committee-ink: #8a5d1d;
+}
+
+.committee-card__figure {
+	flex: 0 0 auto;
+	width: 104px;
+	height: 104px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border: 2px solid var(--committee-line);
+	border-radius: var(--radius-full);
+	/* Soft outer halo in the same hue, so the ring reads as deliberate. */
+	box-shadow: 0 0 0 4px var(--committee-tint);
+	background-color: var(--committee-tint);
+}
+
+.committee-card__figure img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: var(--radius-full);
+}
+
+/* Stands in for a photograph we do not have yet. */
+.committee-card__initials {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-size: var(--font-size-2xl);
+	font-weight: var(--font-weight-bold);
+	line-height: 1;
+	color: var(--committee-ink);
+}
+
+.committee-card__body {
+	/* Long unbroken words (an email address) would otherwise push the
+	 * flex item past the card. */
+	min-width: 0;
+}
+
+.committee-card__name {
+	margin: 0 0 var(--space-2);
+	font-size: var(--font-size-xl);
+	font-weight: var(--font-weight-semibold);
+}
+
+.committee-card__role {
+	display: inline-block;
+	margin: 0;
+	padding: var(--space-1) var(--space-3);
+	border-radius: var(--radius-full);
+	background-color: var(--committee-tint);
+	color: var(--committee-ink);
+	font-size: var(--font-size-sm);
+	font-weight: var(--font-weight-semibold);
+	line-height: var(--line-height-snug);
+}
+
+.committee-card__site {
+	margin: var(--space-2) 0 0;
+	font-size: var(--font-size-sm);
+	color: var(--color-muted-foreground);
+}
+
+.committee-card__site::before {
+	content: "";
+	display: inline-block;
+	width: 0.4rem;
+	height: 0.4rem;
+	margin-right: 0.45rem;
+	border-radius: var(--radius-full);
+	background-color: var(--committee-line);
+	vertical-align: middle;
+}
+
+.committee-card__bio {
+	margin-top: var(--space-4);
+}
+
+.committee-card__bio p {
+	margin: 0 0 var(--space-3);
+	color: var(--color-text-soft);
+	line-height: var(--line-height-relaxed);
+}
+
+.committee-card__bio p:last-child {
+	margin-bottom: 0;
+}
+
+/* Below 600px the photograph moves above the text: 104px of portrait plus
+ * a name like "Andy Kurdynowski" does not fit side by side on a phone. */
+@media (max-width: 599px) {
+	.committee-card {
+		flex-direction: column;
+		gap: var(--space-4);
+	}
+
+	.committee-card__figure {
+		width: 88px;
+		height: 88px;
+	}
+
+	.committee-note {
+		justify-content: flex-start;
+	}
+}
