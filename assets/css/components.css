@@ -1026,27 +1026,6 @@ body.am-portal .at-page__inner {
 	background-color: #fdf3df;
 }
 
-.committee-heading {
-	margin: var(--space-12) 0 var(--space-6);
-	font-size: var(--font-size-2xl);
-}
-
-.committee-heading::after {
-	content: "";
-	display: block;
-	width: 3rem;
-	height: 3px;
-	margin-top: var(--space-3);
-	border-radius: var(--radius-full);
-	background-color: var(--color-primary);
-}
-
-/* The first heading follows the contact note, which already carries the
- * gap. Without this the two margins stack into a hole. */
-.committee-note + .committee-heading {
-	margin-top: 0;
-}
-
 .committee-grid {
 	display: grid;
 	grid-template-columns: 1fr;
