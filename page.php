@@ -29,7 +29,24 @@ get_header();
 				<?php endif; ?>
 				<?php if ( has_post_thumbnail() ) : ?>
 					<div class="at-page__featured">
-						<?php the_post_thumbnail( 'large' ); ?>
+						<?php
+						/*
+						 * `full`, with a sizes describing the real slot: the image
+						 * fills .at-page__inner, which is --container-max less the
+						 * container's padding. WordPress would otherwise claim the
+						 * registered size's own width, so a wide screen was handed
+						 * a variant meant for 1024px and scaled it up.
+						 */
+						the_post_thumbnail(
+							'full',
+							[
+								'sizes' => '(min-width: 1344px) 1216px, '
+									. '(min-width: 1024px) calc(100vw - 64px), '
+									. '(min-width: 640px) calc(100vw - 48px), '
+									. 'calc(100vw - 32px)',
+							]
+						);
+						?>
 					</div>
 				<?php endif; ?>
 				<div class="at-page__content">
